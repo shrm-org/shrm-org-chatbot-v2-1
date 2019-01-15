@@ -1,0 +1,24 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: inherit;
+}
+
+button:disabled,
+button[disabled] {
+  cursor: not-allowed !important;
+}
