@@ -34,12 +34,12 @@ class App extends Component {
               title: 'Here are some common topics that people need help with.',
               subTitle: 'Please choose an option from below',
               buttons: [
-                { text: 'Family and Medical Leave Act (FMLA)', value: 'FMLA' },
-                { text: 'Fair Labor Standards Act (FLSA)', value: 'FLSA' },
+                { text: 'Americans with Disabilities Act (ADA)', value: 'ADA' },
+                { text: 'Annual Conference', value: 'Annual Conference' },
                 { text: 'Compensation', value: 'compensation' },
+                { text: 'Family and Medical Leave Act (FMLA)', value: 'FMLA' },
                 { text: 'Membership', value: 'membership' },
-                { text: 'Annual Conference', value: 'conference' },
-                { text: 'What topic can I help you with?', value: 'question' }
+                { text: 'Other Topics', value: 'question' }
               ]
             }
           ]
@@ -90,7 +90,7 @@ class App extends Component {
         {
           id: 0,
           markdown:
-            `And if you wouldn't mind <a href=${process.env.REACT_APP_SURVEY_LINK}>giving some feedback</a> so we can continue to improve the experience.`
+            `Help us improve this experience. <a href=${process.env.REACT_APP_SURVEY_LINK} target="_blank">Give us your feedback!</a>`
         }
       ];
 
@@ -126,15 +126,12 @@ class App extends Component {
                   'Here are some common topics that people need help with.',
                 subTitle: 'Please choose an option from below',
                 buttons: [
-                  {
-                    text: 'Family and Medical Leave Act (FMLA)',
-                    value: 'FMLA'
-                  },
-                  { text: 'Fair Labor Standards Act (FLSA)', value: 'FLSA' },
+                  { text: 'Americans with Disabilities Act (ADA)', value: 'ADA' },
+                  { text: 'Annual Conference', value: 'Annual Conference' },
                   { text: 'Compensation', value: 'compensation' },
+                  { text: 'Family and Medical Leave Act (FMLA)', value: 'FMLA' },
                   { text: 'Membership', value: 'membership' },
-                  { text: 'Annual Conference', value: 'conference' },
-                  { text: 'What topic can I help you with?', value: 'question' }
+                  { text: 'Other Topics', value: 'question' }
                 ]
               }
             ]
@@ -206,7 +203,7 @@ class App extends Component {
           responseCard: {
             genericAttachments: [
               {
-                title: 'Was that the information you were looking for?',
+                title: 'Was that the information you were seeking?',
                 subTitle: 'Please choose an option from below',
                 buttons: [
                   { text: 'Yes!', value: DONE_TEXT },
@@ -258,7 +255,7 @@ class App extends Component {
         >
           {messages &&
             messages.map((message, idx) => {
-              const user = message.id ? 'You' : 'SHRM Bot';
+              const user = message.id ? 'You' : 'Ask SHRM';
               const messagePayload = {
                 ...message,
                 user,
