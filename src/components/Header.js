@@ -14,7 +14,7 @@ const Header = () => (
         alt="logo"
       />
     }
-    text="SHRM Bot"
+    text="Ask SHRM"
     rightButton={
       <Button style={{ marginTop: 8 }} iconButton>
         <IconExit color={colors.white} />
